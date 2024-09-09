@@ -1,22 +1,15 @@
-package br.com.targettrust.javacore.repository;
-
-import br.com.targettrust.javacore.model.Produto;
-import jakarta.persistence.*;
+package br.com.targettrust.javacore.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "venda")
-public class VendaEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Venda {
+
     private Long id;
 
     private LocalDateTime data = LocalDateTime.now();
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private ProdutoEntity produto;
+    private Produto produto;
 
     private BigDecimal desconto;
 
@@ -38,11 +31,11 @@ public class VendaEntity {
         this.data = data;
     }
 
-    public ProdutoEntity getProduto() {
+    public Produto getProduto() {
         return produto;
     }
 
-    public void setProduto(ProdutoEntity produto) {
+    public void setProduto(Produto produto) {
         this.produto = produto;
     }
 
