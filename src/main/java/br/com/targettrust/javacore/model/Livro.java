@@ -5,6 +5,11 @@ import java.math.BigDecimal;
 public class Livro extends Produto {
 
 
+    @Override
+    public BigDecimal calcularDesconto() {
+        return null;
+    }
+
     public Livro(Long id, String nome, BigDecimal preco) {
         super(id, nome, preco);
     }
@@ -16,5 +21,15 @@ public class Livro extends Produto {
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

@@ -7,6 +7,8 @@ public abstract class Produto {
     protected String nome;
     protected BigDecimal preco;
 
+    public abstract BigDecimal calcularDesconto();
+
     public Produto(Long id, String nome, BigDecimal preco) {
         this.id = id;
         this.nome = nome;

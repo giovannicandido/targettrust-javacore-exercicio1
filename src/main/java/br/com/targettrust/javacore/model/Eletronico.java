@@ -5,6 +5,11 @@ import java.math.BigDecimal;
 public class Eletronico extends Produto {
 
 
+    @Override
+    public BigDecimal calcularDesconto() {
+        return null;
+    }
+
     public Eletronico(Long id, String nome, BigDecimal preco) {
         super(id, nome, preco);
     }
